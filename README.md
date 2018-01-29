@@ -1,6 +1,5 @@
-# prestashop-mailhook
+# Prestashop Mailhook
 Introduces a hook to modify mail behavior in Prestashop
-
 
 ## Intention of this module
 
@@ -24,14 +23,32 @@ Potential use cases of this module are:
 
 ## Requirements
 
- - Prestshop version 1.5, 1.6 or 1.7
+ - Prestshop Version 1.5, 1.6 or 1.7
 
 ## Installation
- - Download this repository to your shops module folder
- - Rename the folder to mailhook
- - Install the module in the shop
- 
- ## Use Hook
+
+### Install from package
+
+Go to the [list of releases](https://github.com/wallee-payment/prestashop-mailhook/releases) and download the latest package.
+You can then upload the file as-is in your Prestashop's module manager.
+
+### Install from source
+
+Go to the /modules directory of your prestashop instance (replace PS_ROOT_DIR by the PATH to your prestashop instance):
+
+```bash
+cd PS_ROOT_DIR/modules
+```
+
+Get the code by cloning the github repository (note: the module directory name MUST be mailhook):
+
+```bash
+git clone --recursive https://github.com/wallee-payment/prestashop-mailhook.git mailhook
+```
+Install the module in the shop
+
+  
+## Use Hook
 
 For using the hook please visit the documentation of PrestaShop itself.
 
