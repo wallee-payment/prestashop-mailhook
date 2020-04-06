@@ -1,10 +1,10 @@
 # Prestashop Mailhook
-Introduces a hook to modify mail behavior in Prestashop
+Introduces a hook to modify the email sending behavior in Prestashop. 
 
 ## Intention of this module
 
 This module executes a hook when an e-mail is sent. This allows other modules to 
-modify the mail message without overridding the Mail class. It provides 
+modify the mail message without overridding the `Mail` class. It provides 
 better compatibility with multiple modules which tries to modify a mail message or
 changing the mail sending behaviour.
 

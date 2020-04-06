@@ -28,7 +28,8 @@ class Mail extends MailCore{
 	 * @return int|boolean 
 	 */
 	public static function Send($id_lang, $template, $subject, $template_vars, $to, $to_name = null, $from = null, $from_name = null, 
-			$file_attachment = null, $mode_smtp = null, $template_path = _PS_MAIL_DIR_, $die = false, $id_shop = null, $bcc = null, $reply_to = null) {
+			$file_attachment = null, $mode_smtp = null, $template_path = _PS_MAIL_DIR_, $die = false, $id_shop = null, $bcc = null, $reply_to = null,
+		$replyToName = null) {
 		
 
 		$message = new MailMessage();
@@ -45,7 +46,9 @@ class Mail extends MailCore{
 			->setModeSMTP($mode_smtp)
 			->setShopId($id_shop)
 			->setBcc($bcc)
-			->setReplyTo($reply_to);
+			->setReplyTo($reply_to)
+			->setReplyToName($replyToName)
+		;
 		if ($file_attachment !== null) {
 			$message->setFileAttachment(new MailMessageAttachment($file_attachment));
 		}
@@ -64,8 +67,8 @@ class Mail extends MailCore{
 	 * @return int|boolean
 	 */
 	public static function sendMailWithoutHook($id_lang, $template, $subject, $template_vars, $to, $to_name = null, $from = null, $from_name = null, 
-			$file_attachment = null, $mode_smtp = null, $template_path = _PS_MAIL_DIR_, $die = false, $id_shop = null, $bcc = null, $reply_to = null) {
-		return parent::Send($id_lang, $template, $subject, $template_vars, $to, $to_name, $from, $from_name, $file_attachment, $mode_smtp, $template_path, $die, $id_shop, $bcc, $reply_to);
+		$file_attachment = null, $mode_smtp = null, $template_path = _PS_MAIL_DIR_, $die = false, $id_shop = null, $bcc = null, $reply_to = null, $replyToName = null) {
+		return parent::Send($id_lang, $template, $subject, $template_vars, $to, $to_name, $from, $from_name, $file_attachment, $mode_smtp, $template_path, $die, $id_shop, $bcc, $reply_to, $replyToName);
 	}
 	
 	/**
@@ -93,7 +96,8 @@ class Mail extends MailCore{
 			$isDie,
 			$message->getShopId(),
 			$message->getBcc(),
-			$message->getReplyTo()
+			$message->getReplyTo(),
+			$message->getReplyToName()
 		);
 	}
 	

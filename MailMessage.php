@@ -39,6 +39,8 @@ class MailMessage {
 	
 	private $replyTo;
 	
+	private $replyToName;
+	
 	/**
 	 * Constructor. Allows to copy the input (copy contructor).
 	 * 
@@ -62,6 +64,7 @@ class MailMessage {
 			$this->toName = $input->toName;
 			$this->bcc = $input->bcc;
 			$this->replyTo = $input->replyTo;
+			$this->replyToName = $input->replyToName;
 		}
 	}
 
@@ -386,6 +389,26 @@ class MailMessage {
 	 */
 	public function setReplyTo($replyTo) {
 		$this->replyTo = $replyTo;
+		return $this;
+	}
+	
+	/**
+	 * Returns the name of the reply to receipient.
+	 * 
+	 * @return string 
+	 */
+	public function getReplyToName() {
+		return $this->replyToName;
+	}
+	
+	/**
+	 * Sets the name of the reply to recipient.
+	 * 
+	 * @param string $replyToName the name of the reply to receipient.
+	 * @return MailMessage this message object.
+	 */
+	public function setReplyToName($replyToName) {
+		$this->replyToName = $replyToName;
 		return $this;
 	}
 	
