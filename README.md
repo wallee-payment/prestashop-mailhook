@@ -47,6 +47,8 @@ git clone --recursive https://github.com/wallee-payment/prestashop-mailhook.git 
 ```
 Install the module in the shop
 
+If you are updating from an older version you might need to update manually the /overrides/classes/Mail.php file as the update mechanism not necessarily updates the file.
+
   
 ## Use Hook
 
