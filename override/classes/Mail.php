@@ -20,6 +20,8 @@ require_once $modulePath . 'MailMessageEvent.php';
  *
  */
 class Mail extends MailCore{
+	// These lines prevents an error when copied by the system.
+	// @see ModuleCore::addOverride()
 
 	/**
 	 * Overrides the default send method. The method returns the number of successful recipients of the
