@@ -23,7 +23,7 @@ Potential use cases of this module are:
 
 ## Requirements
 
- - Prestshop Version 1.5, 1.6 or 1.7
+ - Prestshop Version 1.5, 1.6, 1.7, 8
 
 ## Installation
 
