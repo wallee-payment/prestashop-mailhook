@@ -1,6 +1,11 @@
 # Prestashop Mailhook
 Introduces a hook to modify the email sending behavior in Prestashop. 
 
+
+## Important information
+
+Effective from version 1.2.36 of our payment plugins, it is essential to uninstall the Mailhook module. This action is necessary due to the inclusion of Mailhook files within our payment plugin, ensuring a streamlined and cohesive integration.
+
 ## Intention of this module
 
 This module executes a hook when an e-mail is sent. This allows other modules to 
